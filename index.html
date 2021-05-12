@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <script language="JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="index.js"></script>
+
+        <div id="header">
+            <img src="./images/logo.png" alt="Logo">
+            <h4> Already have an account? </h4>
+            <button> Sign in</button>
+        </div>
+
+        <div id="main-page">
+            <div id="img-holder">
+                <h2>Calculate your Earned Salary Now! </h2>
+                <h4> Each day of work adds value to your company.
+                     How much does it add to you? Register to find out.</h4>
+                <img class="center" src="./images/sample.png" alt="Image">
+            </div>
+            <div id="form-block">
+                <form name="signupForm" action="">
+                    <div id="main-container">
+                        <div id="semi-header">
+                            <h1> Get Started </h1>
+                            <h3>Please fill in the details </h3>
+                        </div>
+
+                        <label for="First Name"><b>First Name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="first-name" pattern="^[a-zA-Z '.]{2,100}" oninput="validateName(this,'firstName')" required>
+
+                        <label for="Last Name"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="last-name" pattern="^[a-zA-Z '.]{2,100}" oninput="validateName(this,'lastName')" required>
+
+                        <label for="Mobile Number"><b>Mobile Number</b></label>
+                        <input type="text" placeholder="Enter Mobile Number" name="mobile-number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[2-9]\d{9}$"  onsubmit="validateMobile(this)" required>
+
+                        <label for="Salary"><b>Basic Salary per Month(in Rupees)</b></label>
+                        <input type="text" placeholder="Enter Salary" name="basic-salary" pattern="^(?!0+)\d+(\.\d{1,2})?"  oninput="validateSalary(this)" required>
+                        <h5>Note: An OTP will be sent to your number for verification</h5>
+
+                        <label for="Salary Date"><b>Salary Date</b></label>
+                        <select name="salary-date" id="date"></select>
+
+                        <button>Register Now</button>
+                        <h5>By registering, you agreee to Haasyl's <a href="">Terms of Service</a> 
+                            and <a href="">Privacy Policy</a></h5>
+                    </div>
+                </form>
+            </div>
+        </div> 
+    </body>
+
+</html>
